@@ -1,8 +1,8 @@
 const {
     performance
   } = require('perf_hooks')
-
-
+// const performance = require('perf_hooks')
+console.log(performance)
 
 
 var log ={
