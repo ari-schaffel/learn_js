@@ -1,8 +1,5 @@
 const nightmare = require('nightmare')({ show: true })
-// const nightmare = Nightmare()
-const {
-    performance
-  } = require('perf_hooks')
+const helper = require('./helpers')
 
 url = 'https://www.amazon.com/Psychology-Money-Timeless-lessons-happiness/dp/0857197681/'
 async function checkPrice(){
@@ -21,13 +18,5 @@ async function checkPrice(){
  
 
 
+console.log(helper.timteit(checkPrice))
 
-timeit(checkPrice)
-
-async function timeit(func){
-        t0=performance.now()
-        await func()
-        t1=performance.now()
-        console.log((t1-t0)/1000)
-
-}
